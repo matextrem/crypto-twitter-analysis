@@ -1,0 +1,14 @@
+{
+  "name": "twitter-sentiment-analysis",
+  "version": "1.0.0",
+  "description": "Tool that performs sentiment analysis on tweets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dirk Hoekstra",
+  "license": "ISC",
+  "dependencies": {
+    "twitter-lite": "^0.11.0"
+  }
+}
