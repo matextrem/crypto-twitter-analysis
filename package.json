@@ -4,11 +4,13 @@
   "description": "Tool that performs sentiment analysis on tweets",
   "main": "index.js",
   "scripts": {
+    "start": "GOOGLE_APPLICATION_CREDENTIALS='./gcloud-private-key.json' node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dirk Hoekstra",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/language": "^4.0.0",
     "twitter-lite": "^0.11.0"
   }
 }

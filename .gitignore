@@ -1,1 +1,4 @@
 node_modules
+gcloud-private-key.json
+*-workspace
+.DS_Store
