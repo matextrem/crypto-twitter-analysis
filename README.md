@@ -1,5 +1,5 @@
 
-# Twitter Semantic Analysis
+# Twitter Sentiment Analysis
 
 This application will get recent tweets on a certain topic and perform sentiment analysis.
 
@@ -23,4 +23,4 @@ npm run start
 
 Enjoy!
 
-- A demo of this application [can be found here](https://coffeecoding.dev/twitter-semantic-analysis)
+- A demo of this application [can be found here](https://coffeecoding.dev/twitter-sentiment-analysis)
