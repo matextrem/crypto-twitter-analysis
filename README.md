@@ -22,3 +22,5 @@ npm run start
 ```
 
 Enjoy!
+
+- A demo of this application [can be found here](https://coffeecoding.dev/twitter-semantic-analysis)
