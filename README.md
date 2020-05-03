@@ -16,4 +16,9 @@ You should set up a Google Platform, enable the Cloud Natural Language API, crea
 
 Use the `searchForTweets("Query")` function to get the sentiment score of recent tweets on that topic.
 
+To start the application run the following command:
+```
+npm run start
+```
+
 Enjoy!
