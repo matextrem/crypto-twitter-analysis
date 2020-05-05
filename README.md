@@ -24,3 +24,4 @@ npm run start
 Enjoy!
 
 - A demo of this application [can be found here](https://coffeecoding.dev/twitter-sentiment-analysis)
+- A detailed article on this tool [can be found here](https://www.freecodecamp.org/news/how-to-build-a-twitter-sentiment-analysis-tool/)
