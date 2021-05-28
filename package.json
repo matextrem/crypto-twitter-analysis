@@ -1,16 +1,18 @@
 {
-  "name": "twitter-sentiment-analysis",
+  "name": "crypto-tweets-analysis",
   "version": "1.0.0",
-  "description": "Tool that performs sentiment analysis on tweets",
+  "description": "Tool that gets sentiment analysis on tweets regarding cryptos and perform market operations through Binance API",
   "main": "index.js",
   "scripts": {
     "start": "GOOGLE_APPLICATION_CREDENTIALS='./gcloud-private-key.json' node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Dirk Hoekstra",
+  "author": "Mati Dastugue",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/language": "^4.0.0",
+    "dotenv": "^10.0.0",
+    "twit": "^2.2.11",
     "twitter-lite": "^0.11.0"
   }
 }
