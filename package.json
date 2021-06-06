@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Tool that gets sentiment analysis on tweets regarding cryptos and perform market operations through Binance API",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "GOOGLE_APPLICATION_CREDENTIALS='./gcloud-private-key.json' node index.js",
+    "start": "GOOGLE_APPLICATION_CREDENTIALS='./gcloud-private-key.json' node --experimental-modules index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mati Dastugue",
@@ -12,6 +13,7 @@
   "dependencies": {
     "@google-cloud/language": "^4.0.0",
     "dotenv": "^10.0.0",
+    "node-binance-api": "^0.12.5",
     "twit": "^2.2.11",
     "twitter-lite": "^0.11.0"
   }
