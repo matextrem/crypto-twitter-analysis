@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "GOOGLE_APPLICATION_CREDENTIALS='./gcloud-private-key.json' node --experimental-modules --es-module-specifier-resolution=node src/index",
-    "start:prod": "NODE_ENV=production && npm start",
+    "start:prod": "NODE_ENV=production node --experimental-modules --es-module-specifier-resolution=node src/index",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./src --fix"
   },
