@@ -1,10 +1,13 @@
 import dotenv from 'dotenv';
-
+import express from 'express';
 import Binance from './services/Binance';
 import Twitter from './services/Twitter';
 import GoogleLanguage from './services/GoogleLanguage';
 
 import { SCALES } from './utils/constants';
+
+const app = express();
+const port = process.env.PORT || 3000;
 
 dotenv.config({ silent: process.env.NODE_ENV === 'production' });
 
@@ -37,4 +40,8 @@ function main() {
   }
 }
 
-main();
+app.listen(port, () => {
+  // eslint-disable-next-line no-console
+  console.log(`App started: Listening at ${port}`);
+  main();
+});
