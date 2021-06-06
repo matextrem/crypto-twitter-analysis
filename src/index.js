@@ -12,13 +12,13 @@ const port = process.env.PORT || 3000;
 dotenv.config({ silent: process.env.NODE_ENV === 'production' });
 
 function main() {
-  try {
-    const twitter = new Twitter(process.env.USER_ID);
-    const binance = new Binance();
-    const language = new GoogleLanguage();
-    const stream = twitter.stream('statuses/filter', { follow: [twitter.userId] });
-    stream.on('tweet', async (tweet) => {
-      if (!tweet.in_reply_to_user_id && !tweet.retweeted_status) {
+  const twitter = new Twitter(process.env.USER_ID);
+  const binance = new Binance();
+  const language = new GoogleLanguage();
+  const stream = twitter.stream('statuses/filter', { follow: [twitter.userId] });
+  stream.on('tweet', async (tweet) => {
+    if (!tweet.in_reply_to_user_id && !tweet.retweeted_status) {
+      try {
         const score = Number(
           (await language.getSentimentScore(tweet.text)).toFixed(2),
         );
@@ -32,12 +32,12 @@ function main() {
           sentimentalObj.action,
           cryptoToken,
         );
+      } catch (e) {
+        // eslint-disable-next-line no-console
+        console.error('There was an error fetching the tweet', e);
       }
-    });
-  } catch (e) {
-    // eslint-disable-next-line no-console
-    console.error('There was an error fetching the tweet', e);
-  }
+    }
+  });
 }
 
 app.listen(port, () => {
