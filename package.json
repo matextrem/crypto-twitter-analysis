@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "GOOGLE_APPLICATION_CREDENTIALS='./gcloud-private-key.json' node --experimental-modules --es-module-specifier-resolution=node src/index",
+    "start:prod":"NODE_ENV=production && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./src --fix"
   },
@@ -22,5 +23,8 @@
     "eslint": "^7.28.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
