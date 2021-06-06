@@ -1,4 +1,3 @@
-export const { USER_ID } = process.env;
 export const BUY_ACTION = 'buy';
 export const SELL_ACTION = 'sell';
 export const DECIMALS_PRECISION = 6;

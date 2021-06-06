@@ -4,13 +4,13 @@ import Binance from './services/Binance';
 import Twitter from './services/Twitter';
 import GoogleLanguage from './services/GoogleLanguage';
 
-import { SCALES, USER_ID } from './utils/constants';
+import { SCALES } from './utils/constants';
 
 dotenv.config({ silent: process.env.NODE_ENV === 'production' });
 
 function main() {
   try {
-    const twitter = new Twitter(USER_ID);
+    const twitter = new Twitter(process.env.USER_ID);
     const binance = new Binance();
     const language = new GoogleLanguage();
     const stream = twitter.stream('statuses/filter', { follow: [twitter.userId] });
