@@ -1,4 +1,4 @@
-import Twit from "twit";
+import Twit from 'twit';
 
 export default class Twitter extends Twit {
   constructor(userId) {

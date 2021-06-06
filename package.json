@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "GOOGLE_APPLICATION_CREDENTIALS='./gcloud-private-key.json' node --experimental-modules index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "GOOGLE_APPLICATION_CREDENTIALS='./gcloud-private-key.json' node --experimental-modules ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src --fix"
   },
   "author": "Mati Dastugue",
   "license": "ISC",
@@ -16,5 +17,10 @@
     "node-binance-api": "^0.12.5",
     "twit": "^2.2.11",
     "twitter-lite": "^0.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
   }
 }
