@@ -38,5 +38,5 @@ export const BTC = 'BTC';
 export const DOGE = 'DOGE';
 
 // TOKEN RULES
-export const BTC_RULE = 'bitcoin|btc';
-export const DOGE_RULE = 'dogecoin|doge';
+export const BTC_RULE = /bitcoin|btc/;
+export const DOGE_RULE = /dogecoin|doge/;

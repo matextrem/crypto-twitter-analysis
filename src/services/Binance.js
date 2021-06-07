@@ -52,8 +52,8 @@ export default class Binance {
   }
 
   static getCryptoTokenFromText(text) {
-    if (text.toLowerCase().match(`/${BTC_RULE}/`)) return BTC;
-    if (text.toLowerCase().match(`/${DOGE_RULE}/`)) return DOGE;
+    if (text.toLowerCase().match(BTC_RULE)) return BTC;
+    if (text.toLowerCase().match(DOGE_RULE)) return DOGE;
     return undefined;
   }
 }
