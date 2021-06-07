@@ -40,6 +40,8 @@ function main() {
   });
 }
 
+app.get('/ping', (_, res) => res.send('pong'));
+
 app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`App started: Listening at ${port}`);
